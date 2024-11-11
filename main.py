@@ -59,24 +59,27 @@ def llamar_prueba():
 
 ################################################################################################
 # Función para abrir el submenú 2 de Organización de Credenciales
-def organizacion_credenciales(menu_principal):
+def gestion_tarjeta(menu_principal):
     ventana_organizacion = tk.Toplevel(root)
-    ventana_organizacion.title("Organización de Credenciales")
+    ventana_organizacion.title("Gestión tarjetas")
     ventana_organizacion.geometry("400x400")
     
-    label_organizacion = tk.Label(ventana_organizacion, text="Organización de Credenciales", font=("Arial", 14))
+    label_organizacion = tk.Label(ventana_organizacion, text="Gestión tarjetas", font=("Arial", 14))
     label_organizacion.pack(pady=10)
 
-    button_crear_carpeta = tk.Button(ventana_organizacion, text="1. Crear una nueva carpeta o grupo", command=lambda: abrir_ventana("Crear Carpeta", "Aquí puedes crear una nueva carpeta o grupo"))
+    button_crear_carpeta = tk.Button(ventana_organizacion, text="1. Agregar una nueva tarjeta", command=lambda: abrir_ventana("Crear Carpeta", "Aquí puedes crear una nueva carpeta o grupo"))
     button_crear_carpeta.pack(pady=5)
 
-    button_mover_contraseña = tk.Button(ventana_organizacion, text="2. Mover una contraseña a una carpeta", command=lambda: abrir_ventana("Mover Contraseña", "Aquí puedes mover una contraseña a una carpeta"))
+    button_mover_contraseña = tk.Button(ventana_organizacion, text="2. Ver todas las tarjetas", command=lambda: abrir_ventana("Mover Contraseña", "Aquí puedes mover una contraseña a una carpeta"))
     button_mover_contraseña.pack(pady=5)
 
-    button_ver_carpeta = tk.Button(ventana_organizacion, text="3. Ver contraseñas por carpeta o grupo", command=lambda: abrir_ventana("Ver Carpeta", "Aquí puedes ver las contraseñas organizadas por carpeta o grupo"))
+    button_ver_carpeta = tk.Button(ventana_organizacion, text="3. Buscar una tarjeta por nombre o categoría", command=lambda: abrir_ventana("Ver Carpeta", "Aquí puedes ver las contraseñas organizadas por carpeta o grupo"))
     button_ver_carpeta.pack(pady=5)
 
-    button_eliminar_carpeta = tk.Button(ventana_organizacion, text="4. Eliminar una carpeta", command=lambda: abrir_ventana("Eliminar Carpeta", "Aquí puedes eliminar una carpeta tras confirmar que no contiene contraseñas"))
+    button_eliminar_carpeta = tk.Button(ventana_organizacion, text="4. Actualizar una datos de una tarjeta existente", command=lambda: abrir_ventana("Eliminar Carpeta", "Aquí puedes eliminar una carpeta tras confirmar que no contiene contraseñas"))
+    button_eliminar_carpeta.pack(pady=5)
+
+    button_eliminar_carpeta = tk.Button(ventana_organizacion, text="5. Eliminar una tarjeta")
     button_eliminar_carpeta.pack(pady=5)
 
     # Botón para volver al menú principal
@@ -85,21 +88,24 @@ def organizacion_credenciales(menu_principal):
 
 ################################################################################################
 # Función para abrir el submenú 3 de Generación de Contraseñas Seguras
-def contraseñas_seguras(menu_principal):
+def organizar_contrasenas(menu_principal):
     ventana_organizacion = tk.Toplevel(root)
-    ventana_organizacion.title("Generación de Contraseñas Seguras")
+    ventana_organizacion.title("Organizar Contraseñas")
     ventana_organizacion.geometry("400x400")
     
-    label_organizacion = tk.Label(ventana_organizacion, text="Generación de Contraseñas Seguras", font=("Arial", 14))
+    label_organizacion = tk.Label(ventana_organizacion, text="Organizar Contraseñas", font=("Arial", 14))
     label_organizacion.pack(pady=10)
 
-    button_crear_carpeta = tk.Button(ventana_organizacion, text="1. Generar una contraseña con requisitos específicos", command=lambda: abrir_ventana("Crear Carpeta", "Aquí puedes crear una nueva carpeta o grupo"))
+    button_crear_carpeta = tk.Button(ventana_organizacion, text="1. Crear categoría de cuenta")
     button_crear_carpeta.pack(pady=5)
 
-    button_mover_contraseña = tk.Button(ventana_organizacion, text="2. Guardar la contraseña generada", command=lambda: abrir_ventana("Mover Contraseña", "Aquí puedes mover una contraseña a una carpeta"))
+    button_mover_contraseña = tk.Button(ventana_organizacion, text="2. Buscar y Mover una cuenta a otra categoría", command=lambda: abrir_ventana("Mover Contraseña", "Aquí puedes mover una contraseña a una carpeta"))
     button_mover_contraseña.pack(pady=5)
 
-    button_ver_carpeta = tk.Button(ventana_organizacion, text="3. Eliminar contraseña", command=lambda: abrir_ventana("Ver Carpeta", "Aquí puedes ver las contraseñas organizadas por carpeta o grupo"))
+    button_ver_carpeta = tk.Button(ventana_organizacion, text="3. Ver cuentas por categoría", command=lambda: abrir_ventana("Ver Carpeta", "Aquí puedes ver las contraseñas organizadas por carpeta o grupo"))
+    button_ver_carpeta.pack(pady=5)
+
+    button_ver_carpeta = tk.Button(ventana_organizacion, text="4. Eliminar una cuenta de una categoría", command=lambda: abrir_ventana("Ver Carpeta", "Aquí puedes ver las contraseñas organizadas por carpeta o grupo"))
     button_ver_carpeta.pack(pady=5)
 
     # Botón para volver al menú principal
@@ -108,18 +114,21 @@ def contraseñas_seguras(menu_principal):
 
 ################################################################################################
 # Función para abrir el submenú 4 de Monitoreo de Seguridad
-def monitoreo_seguridad(menu_principal):
+def contrasena_segura(menu_principal):
     ventana_organizacion = tk.Toplevel(root)
-    ventana_organizacion.title("Monitoreo de Seguridad")
+    ventana_organizacion.title("Generación de Contraseña Segura")
     ventana_organizacion.geometry("400x400")
     
-    label_organizacion = tk.Label(ventana_organizacion, text="Monitoreo de Seguridad", font=("Arial", 14))
+    label_organizacion = tk.Label(ventana_organizacion, text="Generación de Contraseña Segura", font=("Arial", 14))
     label_organizacion.pack(pady=10)
 
-    button_crear_carpeta = tk.Button(ventana_organizacion, text="1. Verificar contraseñas débiles", command=lambda: abrir_ventana("Crear Carpeta", "Aquí puedes crear una nueva carpeta o grupo"))
+    button_crear_carpeta = tk.Button(ventana_organizacion, text="1. Generar una contraseña con requisitos específicos", command=lambda: abrir_ventana("Crear Carpeta", "Aquí puedes crear una nueva carpeta o grupo"))
     button_crear_carpeta.pack(pady=5)
 
-    button_mover_contraseña = tk.Button(ventana_organizacion, text="2. Cambiar contraseñas activadas", command=lambda: abrir_ventana("Mover Contraseña", "Aquí puedes mover una contraseña a una carpeta"))
+    button_mover_contraseña = tk.Button(ventana_organizacion, text="2. Guardar la contraseña generada", command=lambda: abrir_ventana("Mover Contraseña", "Aquí puedes mover una contraseña a una carpeta"))
+    button_mover_contraseña.pack(pady=5)
+
+    button_mover_contraseña = tk.Button(ventana_organizacion, text="3. Eliminar contraseña y cuenta", command=lambda: abrir_ventana("Mover Contraseña", "Aquí puedes mover una contraseña a una carpeta"))
     button_mover_contraseña.pack(pady=5)
 
     # Botón para volver al menú principal
@@ -168,15 +177,15 @@ def abrir_menu():
     button_gestion.pack(pady=5)
 
     # Opción 2: Organización de Credenciales
-    button_organizar = tk.Button(menu, text="2. Organización de Credenciales", command=lambda: organizacion_credenciales(menu))
+    button_organizar = tk.Button(menu, text="2. Gestión de Tarjetas", command=lambda: gestion_tarjeta(menu))
     button_organizar.pack(pady=5)
 
     # Opción 3:
-    button_generar = tk.Button(menu, text="3. Generación de Contraseñas Seguras", command=lambda: contraseñas_seguras(menu))
+    button_generar = tk.Button(menu, text="3. Organizar contraseñas", command=lambda: organizar_contrasenas(menu))
     button_generar.pack(pady=5)
 
     ## Opción 4: Monitoreo de Seguridad
-    button_seguridad = tk.Button(menu, text="4. Monitoreo de Seguridad", command=lambda: monitoreo_seguridad(menu))
+    button_seguridad = tk.Button(menu, text="4. Monitoreo de Seguridad", command=lambda: contrasena_segura(menu))
     button_seguridad.pack(pady=5)
 
     # Opción 5: Recuperación de Cuenta
@@ -244,6 +253,9 @@ conector.DataBase().create_if_not_exists()
 
 # Iniciar el loop principal
 root.mainloop()
+
+
+
 
 
 
